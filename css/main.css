@@ -1,0 +1,525 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body, html {
+  font-family: "Montserrat", sans-serif;
+  color: #181818;
+}
+
+@media (max-width: 1199px) {
+  h1, h2, h3, h4, h5, h6 {
+    font-size: 3.15rem;
+  }
+}
+
+@media (max-width: 900px) {
+  h1, h2, h3, h4, h5, h6 {
+    font-size: 3.8rem;
+  }
+}
+
+@media (max-width: 500px) {
+  h1, h2, h3, h4, h5, h6 {
+    font-size: 3.5rem;
+  }
+}
+
+.cardStyle1, section.personalCards .mycard {
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.cardStyle1:hover, section.personalCards .mycard:hover {
+  -webkit-box-shadow: 0 30px 30px -10px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 30px 30px -10px rgba(0, 0, 0, 0.2);
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.cardStyle2, section.request .form-request {
+  border-radius: 10px;
+  -webkit-box-shadow: 0 30px 30px -10px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 30px 30px -10px rgba(0, 0, 0, 0.2);
+  background: #fff;
+}
+
+.inputCustom, section.request .form-request input, section.request .form-request select, section.request .form-request textarea {
+  outline: none;
+  border-radius: 20px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 10px 0 10px 35px;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.inputCustom:focus, section.request .form-request input:focus, section.request .form-request select:focus, section.request .form-request textarea:focus {
+  -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 4px 0px;
+          box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 4px 0px;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+header {
+  position: relative;
+}
+
+header nav img {
+  width: 80px;
+  height: 80px;
+}
+
+header nav .navbar-toggler-icon i {
+  color: #b61960;
+}
+
+header nav ul li.nav-item {
+  padding-right: 50px;
+}
+
+header nav ul li.nav-item a.nav-link {
+  color: #181818;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: initial;
+  position: relative;
+}
+
+header nav ul li.nav-item a.nav-link:after {
+  content: "";
+  width: 10px;
+  height: 10px;
+  border-radius: 50px;
+  border: 1px solid #b61984;
+  background: #b61984;
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+header nav ul li.nav-item a.nav-link:hover:after {
+  -webkit-transform: scale(100%);
+          transform: scale(100%);
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+header nav ul li.nav-item.active a.nav-link:after {
+  content: "";
+  width: 10px;
+  height: 10px;
+  border-radius: 50px;
+  border: 1px solid #b61984;
+  background: #b61984;
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  -webkit-transform: scale(100%);
+          transform: scale(100%);
+}
+
+header nav button.myBTN {
+  background: #b61960;
+  padding: 1.1em 1.5em;
+  border: none;
+  border-radius: 50px;
+  color: #fff;
+  font-size: 13.5px;
+  font-weight: 500;
+  line-height: initial;
+}
+
+header nav button.myBTN:hover {
+  background: transparent;
+  border: 1px solid #b61960;
+  color: #b61960;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+header nav a.fab {
+  color: #181818;
+  text-decoration: none;
+  margin-left: 1em;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+header nav a.fab:hover {
+  color: #b61984;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+header img.headerbg {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+footer {
+  background: url("../images/footer_background.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom;
+}
+
+footer .container {
+  padding: 8em 0 12em;
+}
+
+footer h3 {
+  color: #fff;
+  font-size: 1.55rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 2rem;
+}
+
+footer a {
+  color: #fff;
+  text-decoration: none;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+footer .social a {
+  padding-right: 15px;
+  text-decoration: none;
+}
+
+footer li {
+  list-style: none;
+  color: #fff;
+  font-size: 0.9rem;
+  font-weight: 400;
+  line-height: 1.1;
+  margin-bottom: 1em;
+  font-family: "Roboto", sans-serif;
+}
+
+footer .col-3:nth-child(1) a:hover {
+  color: #181818;
+  text-decoration: none;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+footer .col-3:nth-child(2) li, footer .col-3:nth-child(3) li {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  line-height: 1;
+  padding-bottom: 0.8em;
+}
+
+footer .col-3:nth-child(2) li a:hover, footer .col-3:nth-child(3) li a:hover {
+  color: #fff;
+  opacity: 0.8;
+  text-decoration: none;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+footer form input {
+  width: 100%;
+  text-align: center;
+}
+
+footer form input[type="email"] {
+  outline: none;
+  background: transparent;
+  border-radius: 50px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 10px 0;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  margin-bottom: 1em;
+}
+
+footer form input[type="email"]:focus {
+  -webkit-box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.1);
+  border: 1px solid white;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+footer form input[type="email"]::-webkit-input-placeholder {
+  color: #fff;
+  font-family: "Roboto", sans-serif;
+}
+
+footer form input[type="email"]:-ms-input-placeholder {
+  color: #fff;
+  font-family: "Roboto", sans-serif;
+}
+
+footer form input[type="email"]::-ms-input-placeholder {
+  color: #fff;
+  font-family: "Roboto", sans-serif;
+}
+
+footer form input[type="email"]::placeholder {
+  color: #fff;
+  font-family: "Roboto", sans-serif;
+}
+
+footer form input[type="submit"] {
+  background: #fff;
+  padding: 10px 0;
+  border: none;
+  border-radius: 50px;
+  color: #181818;
+  font-size: 0.8em;
+  font-weight: 600;
+  line-height: initial;
+  height: 4em;
+}
+
+footer form input[type="submit"]:hover {
+  background: transparent;
+  border: 1px solid #fff;
+  color: #fff;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+section.carousel {
+  position: relative;
+  padding-bottom: 100px;
+}
+
+section.carousel h6 {
+  color: #b61960;
+  font-size: 16.5px;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+section.carousel h2 {
+  color: #191919;
+  font-size: 57px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+@media (max-width: 1199px) {
+  section.carousel h2 {
+    font-size: 3.15rem;
+  }
+}
+
+@media (max-width: 900px) {
+  section.carousel h2 {
+    font-size: 3.8rem;
+  }
+}
+
+@media (max-width: 500px) {
+  section.carousel h2 {
+    font-size: 3.5rem;
+  }
+}
+
+section.carousel .row img {
+  width: 100%;
+}
+
+section.carousel .carouselbgimg {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+}
+
+section.personalCards {
+  position: relative;
+  background-color: #dcd1f0;
+}
+
+section.personalCards .container {
+  position: relative;
+  z-index: 2;
+}
+
+section.personalCards .row:first-of-type {
+  margin-bottom: 40px;
+}
+
+section.personalCards .mycard h6 {
+  color: #b61984;
+  font-size: 0.75rem;
+  font-weight: 600;
+  line-height: initial;
+  margin-bottom: 0.7em;
+}
+
+section.personalCards .mycard h3 {
+  color: #191919;
+  font-size: 1.55rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+section.personalCards .mycard p {
+  font-family: "Roboto", sans-serif;
+  color: #181818;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.8em;
+}
+
+section.personalCards .mycard img {
+  width: 100%;
+}
+
+section.personalCards .mycard .text-content {
+  padding: 30px 20px;
+}
+
+section.personalCards img.personalbgimg {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+}
+
+section.request {
+  position: relative;
+}
+
+section.request .container {
+  position: relative;
+  z-index: 1;
+}
+
+section.request .container img {
+  width: 100%;
+}
+
+section.request .form-request {
+  padding: 10px 25px;
+  text-align: center;
+}
+
+section.request .form-request h2 {
+  color: #191919;
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+section.request .form-request .col-6, section.request .form-request .col-12 {
+  position: relative;
+}
+
+section.request .form-request .col-6 i, section.request .form-request .col-12 i {
+  position: absolute;
+  left: 27px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  color: #b61984;
+}
+
+section.request .form-request .col-6 .fa-comment-alt, section.request .form-request .col-12 .fa-comment-alt {
+  top: 20px;
+}
+
+section.request .form-request input, section.request .form-request select, section.request .form-request textarea {
+  width: 100%;
+  color: initial;
+  font-size: 0.8em;
+  font-weight: initial;
+  line-height: initial;
+  font-family: "Roboto", sans-serif;
+}
+
+section.request .form-request input::-webkit-input-placeholder {
+  font-family: "Roboto", sans-serif;
+}
+
+section.request .form-request input:-ms-input-placeholder {
+  font-family: "Roboto", sans-serif;
+}
+
+section.request .form-request input::-ms-input-placeholder {
+  font-family: "Roboto", sans-serif;
+}
+
+section.request .form-request input::placeholder {
+  font-family: "Roboto", sans-serif;
+}
+
+section.request .form-request select {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
+section.request .form-request textarea {
+  padding-bottom: 50px;
+}
+
+section.request .form-request textarea::-webkit-input-placeholder {
+  font-family: "Roboto", sans-serif;
+}
+
+section.request .form-request textarea:-ms-input-placeholder {
+  font-family: "Roboto", sans-serif;
+}
+
+section.request .form-request textarea::-ms-input-placeholder {
+  font-family: "Roboto", sans-serif;
+}
+
+section.request .form-request textarea::placeholder {
+  font-family: "Roboto", sans-serif;
+}
+
+section.request .form-request button {
+  background: #b61984;
+  padding: 15px 20px;
+  border: none;
+  border-radius: 50px;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: initial;
+  width: 100%;
+}
+
+section.request .form-request button:hover {
+  background: transparent;
+  border: 1px solid #b61984;
+  color: #b61984;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+section.request img.requestbgimg {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+}
+/*# sourceMappingURL=main.css.map */

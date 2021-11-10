@@ -1,0 +1,26 @@
+.inputCustom{
+    outline: none;
+    border-radius: 20px;
+    border: 1px solid rgba(0,0,0,0.1);
+    padding: 10px 0 10px 35px;
+    transition: .5s;
+    &:focus{
+        box-shadow: rgba(0 ,0 ,0 ,0.1) 0px 0px 4px 0px;
+        border: 1px solid rgba(0, 0, 0, 0.3);
+        transition: .5s;
+    }
+}
+
+@mixin input($bg,$radius,$border,$padding,$shadowfocus,$borderfocus){
+    outline: none;
+    background:$bg;
+    border-radius: $radius;
+    border: $border;
+    padding: $padding;
+    transition: 0.5s;
+    &:focus{
+        box-shadow:$shadowfocus;
+        border: $borderfocus;
+        transition: 0.5s;
+    }
+}

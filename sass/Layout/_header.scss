@@ -1,0 +1,80 @@
+header{
+    position: relative;
+    nav{
+        img{
+            width: 80px;
+            height: 80px;
+        }
+        .navbar-toggler-icon{
+            i{
+                color: $color-main;
+            }
+        }
+        ul{
+            li.nav-item{
+                padding-right: 50px;
+                a.nav-link{
+                    @include textStyle($color-black-1,13px,600);
+                    position: relative;
+                    &:after{
+                        content:"";
+                        width: 10px;
+                        height: 10px;
+                        border-radius: 50px;
+                        border: 1px solid $color-pink;
+                        background:$color-pink;
+                        position: absolute;
+                        bottom: -20px;
+                        left: 50%;
+                        transform: scale(0);
+                        transition: .5s;
+                    }
+                    &:hover{
+                        &:after{
+                            transform: scale(100%);
+                            transition: .5s;
+                        }
+                    }
+                }
+                &.active{
+                    a.nav-link{
+                        &:after{
+                            content:"";
+                            width: 10px;
+                            height: 10px;
+                            border-radius: 50px;
+                            border: 1px solid $color-pink;
+                            background:$color-pink;
+                            position: absolute;
+                            bottom: -20px;
+                            left: 50%;
+                            transform: scale(100%);
+                        }
+                    }
+                }
+                
+            }
+        }
+        button.myBTN{
+            @include button($color-main,1.1em 1.5em,none,50px);
+            @include textStyle($color-white,13.5px,500);
+        }
+        a.fab{
+            color: $color-black-1;
+            text-decoration: none;
+            margin-left: 1em;
+            transition: .5s;
+            &:hover{
+                color: $color-pink;
+                transition: .5s;
+            }
+        }   
+    }
+    img.headerbg{
+        width: 100%;
+        position: absolute;
+        top:0;
+        left:0;
+        z-index: -1;
+    }
+}

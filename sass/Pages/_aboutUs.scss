@@ -1,0 +1,148 @@
+section.carousel{
+    position: relative;
+    padding-bottom: 100px;
+    h6{
+        @include textStyle($color-main,$fs-15+1.5,$fw-6,1.2)
+    }
+    h2{
+        @include textStyle($color-black-2,$fs-57,$fw-7,1.2)
+    }
+
+    @media (max-width: 1199px){
+       h2{
+            font-size: 3.15rem;}
+        };
+        @media (max-width: 900px){
+        h2{
+            font-size: 3.8rem;
+        }};
+        @media (max-width: 500px){
+        h2{
+            font-size: 3.5rem;
+        }}
+
+    .row{
+        img{
+            width: 100%;
+        }
+    }
+    .carouselbgimg{
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        z-index: -1;
+    }
+}
+
+
+
+
+section.personalCards{
+    position: relative;
+    background-color: $color-purple;
+    .container{
+        position: relative;
+        z-index: 2;
+    }
+    .row{
+        &:first-of-type{
+            margin-bottom: 40px;
+        }
+    }
+    .mycard
+    {
+        @extend .cardStyle1;
+        h6{
+            @include textStyle($color-pink,.75rem,$fw-6);
+            margin-bottom: 0.7em;
+        }
+        h3{
+            @include textStyle($color-black-2,1.55rem,$fw-7,1.2)
+        }
+        p{
+            font-family: $font-secondary;
+            @include textStyle($color-black-1,$fs-15,$fw-4,1.8em);
+        }
+        img{
+            width:100%;
+        }
+        .text-content{
+            padding: 30px 20px;
+        }
+    }
+    img.personalbgimg
+    {
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+    }
+}
+
+section.request{
+    position: relative;
+    .container{
+        position: relative;
+        z-index: 1;
+        img{
+            width:100%;
+        }
+    }
+
+    .form-request{
+        @extend .cardStyle2;
+
+        padding: 10px 25px;
+        text-align: center;
+
+        h2{
+            @include textStyle($color-black-2,2.5rem,$fw-7,1.2)
+        }
+
+        .col-6,.col-12{
+            position: relative;
+            i{
+                position: absolute;
+                left: 27px;
+                top:50%;
+                transform: translateY(-50%);
+                color: $color-pink;
+            }
+            .fa-comment-alt{
+                top:20px;
+            }
+        }
+
+        input,select,textarea{
+            width:100%;
+            @extend .inputCustom;
+            @include textStyle(initial,0.8em,initial);
+            font-family: $font-secondary;
+        }
+        input{
+            &::placeholder{
+                font-family: $font-secondary;
+            }
+        }
+        select{
+            appearance:  none;
+        }
+        textarea{
+            padding-bottom: 50px;
+            &::placeholder{
+                font-family: $font-secondary;
+            }
+        }
+        button{
+            @include button($color-pink,15px 20px,none,50px);
+            @include textStyle($color-white,$fs-15,$fw-5);
+            width: 100%;
+        }
+    }
+
+    img.requestbgimg{
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+    }
+}

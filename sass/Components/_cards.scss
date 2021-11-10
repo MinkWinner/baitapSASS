@@ -1,0 +1,19 @@
+.cardStyle1{
+    background: $color-white;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    transition: .5s;
+    &:hover{
+        box-shadow: $box-shadow-1;
+        transition: .5s;
+    }
+}
+
+.cardStyle2{
+    border-radius: 10px;
+    box-shadow: $box-shadow-1;
+    background: $color-white;
+}
